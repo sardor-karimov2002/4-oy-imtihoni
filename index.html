@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-oy yakuniy imtihon</title>
+    <link rel="stylesheet" href="./css /main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .logo{
+        padding: 4px;
+    }
+    .saerch{
+        margin: 5px 30px;
+        width: 500px;
+        height: 40px;
+        padding: 0;
+        align-items: center;
+        border: 1px solid rgb(241, 237, 237);
+        border-radius: 10px;
+        background-color: rgb(255, 254, 254);
+    }
+    .iconka{
+        margin: 9px 8px;
+    }
+    .dop{
+        border: 1px solid oldlace;
+        border-radius: 9px; 
+        padding:4px;
+    }
+    .text{
+        display: flex;
+        margin-right: 450px;
+        margin-top: 9px;
+    }
+    .button{
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="heder col-12 justify-content-between">
+            <div class="heder_card  d-flex justify-content-between">
+                <a href="#"><img class="logo accordion-body" src="./img/lof.png" alt=""></a>
+                <div class="saerch w-50"><img class="iconka" src="./img/saerch.png" alt="">Search books </div>
+                <div class="d-flex accordion-body">
+                    <img class="icon d-flex justify-content-end" src="./img/quyosh.png" alt="">
+                    <button class="btn btn-sm btn-primary">Logout</button>
+                </div>
+            </div>
+            <div class="dop d-flex justify-content-end w-100 accordion-body">
+                <p class="text d-flex justify-content-center">Showing 18 Result(s)</p>
+                <button class="button border-0">
+                    <img src="./img/calendar.png" alt="">
+                    Order by newest
+                </button>
+            </div>
+            <div class="row">
+                <!-- bu yerga sevimli kitoblar ro'yxati yoziladi -->
+                <div class="col-3  mt-4 border border-1">
+                    <div class="">
+                        <h3>Bookmarks</h3>
+                        <p>If you don’t like to read, you haven’t found the right book</p>
+                        <ul class="list-unstyled border border-danger   flex-column " id="playlist">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- asosiy cardlar shu yerga uzatiladi  -->
+                <div  class="col-9 d-flex mt-4 ">
+                    <div id="user-list" class="row">
+                        <div class="col-4">
+                            <div class="users  border border-1 p-2">
+                                <img class="user-img p-2 w-100" src="http://picsum.photos/400" alt="">
+                                <h6 class="user-title mt-3  mb-3">Title</h6>
+                                <p class="user-id">id</p>
+                                <div>
+                                    <button class="bookmark-btn btn btn-sm btn-primary" type="button">Sevimli qo'sh</button>
+                                    <button class="more-btn btn btn-sm btn-info" type="button">Qachon ishlangan</button>
+                                </div>
+                                
+                                <button class="w-100 mt-2 border border-0 btn-danger">Read</button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="users  border border-1 p-2">
+                                <img class="user-img p-2 w-100" src="http://picsum.photos/400" alt="">
+                                <h6 class="user-title mt-3  mb-3">Title</h6>
+                                <p class="user-id">id</p>
+                                <div>
+                                    <button class="bookmark-btn btn btn-sm btn-primary" type="button">Sevimli qo'sh</button>
+                                    <button class="more-btn btn btn-sm btn-info" type="button">Qachon ishlangan</button>
+                                </div>
+                                
+                                <button class="w-100 mt-2 border border-0 btn-danger">Read</button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="users  border border-1 p-2">
+                                <img class="user-img p-2 w-100" src="http://picsum.photos/400" alt="">
+                                <h6 class="user-title mt-3  mb-3">Title</h6>
+                                <p class="user-id">id</p>
+                                <div>
+                                    <button class="bookmark-btn btn btn-sm btn-primary" type="button">Sevimli qo'sh</button>
+                                    <button class="more-btn btn btn-sm btn-info" type="button">Qachon ishlangan</button>
+                                </div>
+                                
+                                <button class="w-100 mt-2 border border-0 btn-danger">Read</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pajinishin uzatilishi -->
+        <div class="row mt-2 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <ul class="pagination">
+                    <li class="page-item d-flex">
+                        <span data-task="pagination-btn" class="page-link">prev</span>
+                        <span data-task="pagination-btn" class="page-link">Next</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        
+    </div> 
+      <template id="paginate-btn">
+            <li class="page-item">
+                <span data-task="pagination-btn" class="page-link">prev</span>
+                <span data-task="pagination-btn" class="page-link">Next</span>
+            </li>
+        </template>
+    <template id="user-template">
+            <div class="col-3 col-md-4">
+                <div class="users h-100  border border-1 p-2">
+                    <img class="user-img p-2 w-100" src="http://picsum.photos/400" alt="">
+                    <h6 class="user-title mt-3  mb-3">Title</h6>
+                    <p class="user-id">id</p>
+                    <div>
+                        <button class="bookmark-btn btn btn-sm btn-primary" type="button">Bookmark</button>
+                        <button class="more-btn btn btn-sm btn-info" type="button">More Info</button>
+                    </div>
+
+                    <button class="w-100 mt-2 border border-0 btn-danger">Read</button>
+                </div>
+            </div>
+    
+    </template>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/check-login.js"></script>
+<script src="./js/main.js"></script>
+</html>

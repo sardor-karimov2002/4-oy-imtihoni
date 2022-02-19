@@ -1,0 +1,88 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 185px;
+    z-index: 9;
+    left: 350px;
+    width:500px;
+    // border: 1px solid wheat;
+ 
+    .form{
+        display: flex;
+        border-radius: 7px;
+        padding: 30px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__title{
+            color: rgb(212, 92, 92);
+            font-weight: 700;
+        }
+        &__submit2{
+            margin-left: auto;
+            color: white;
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+        &__submit{
+            border: none;
+            border-radius: 5px;
+            padding: 10px 128px ;
+            color:rgb(13, 45, 228);
+            margin-top: 20px;
+            font-size: 16px;    
+            border: 2.5px solid wheat;
+            font-weight: 900;
+        }
+        &__submit:hover{
+            left: -30px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        &__email, &__password{
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+    
+            &__label{
+                font-size: 20px;
+                display: flex;
+                position: absolute;
+                top: 10px;
+                left: 0px;
+                padding: 0px 6px;
+
+            };
+            &__input{
+                width: 100%;
+                font-size: 20px;
+                border: 1px solid rgb(241, 241, 243);
+                padding: 10px 29px ;
+                border-radius: 5px ;
+                outline: none;
+                background-color: rgba($color: #888686, $alpha: 0.2);
+            }
+            
+        }
+        
+    }
+}
+.notifications{
+    max-width: 1490px;
+    height: 98vh;
+    padding: 0;
+    display: flex;
+    position: relative;
+    margin:0 auto;  
+    background: url(../img/bg-img.jpg)
+}
+.alert{
+    padding: 10px;
+    min-width: 600px;
+    background-color: red;
+    color: white;
+}

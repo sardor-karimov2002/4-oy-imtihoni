@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./css /main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="notifications">
+
+    </div>
+    <div class="login">
+        <form action="" class="login__form form">
+            <h2 class="form__title">
+                <img src="./img/logo.png" alt="">
+            </h2>
+            <label class="form__email">
+                <span class="form__email__label"><img src="./img/user.png" alt=""> </span>
+                <input class=" form__email__input text-light" placeholder="Username:" type="text"></input>
+            </label>
+            <label class="form__password">
+                <span class="form__password__label"><img src="./img/lock.png" alt=""></span>
+                <input class="form__password__input text-light" placeholder="Password:" type="password">                
+            </label>
+            <button type="submit" class="form__submit">Login</button>
+            <p class="form__submit2">Forgot password?</p>
+        </form> 
+    </div>
+<template id="alert-template">
+    <div class="alert">
+        message 
+    </div>
+</template>
+</body>
+<script src="./js/validitions.js"></script>
+<script src="./js/login.js"></script>
+</html>
